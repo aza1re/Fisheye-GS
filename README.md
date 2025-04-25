@@ -5,7 +5,7 @@ And I am sorry that I have put it aside since its publication.
 
 I will maintain Fisheye-GS, debug the code and reply the issues as soon as possible. 
 
-Fisheye-GS cannot render through cameras with extremely large distortion, because of the error from the first-order approximation. If you want to render 3DGS with distorted cameras, you can try [3DGUT]([https://github.com/Accelsnow/diff-gaussian-rasterization-distwar.git](https://research.nvidia.com/labs/toronto-ai/3DGUT/) for better performance.
+Fisheye-GS cannot render through cameras with extremely large distortion, because of the error from the first-order approximation. If you want to render 3DGS with distorted cameras, you can try [3DGUT](https://research.nvidia.com/labs/toronto-ai/3DGUT/) for better performance.
 
 In the future, I will develop the compiler for more distortion models for both rendering or training.
 # Fisheye-GS
