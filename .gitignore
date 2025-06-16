@@ -1,5 +1,6 @@
 *.pyc
 .vscode
+**/venv/
 output
 output/
 SIBR_viewers
