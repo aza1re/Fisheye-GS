@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.6">
+  <diagram name="Page-1" id="MI6X1zmfZMaOIha0aocF">
+    <mxGraphModel dx="1188" dy="648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yuGMsMESG8WVv5Zoxk4M-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yuGMsMESG8WVv5Zoxk4M-1" target="yuGMsMESG8WVv5Zoxk4M-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGMsMESG8WVv5Zoxk4M-1" value="ffmpeg: &lt;br&gt;Video to Frames" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="130" width="150" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGMsMESG8WVv5Zoxk4M-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="yuGMsMESG8WVv5Zoxk4M-3" target="yuGMsMESG8WVv5Zoxk4M-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGMsMESG8WVv5Zoxk4M-3" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;3DGS for windows from Gene&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="30" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGMsMESG8WVv5Zoxk4M-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yuGMsMESG8WVv5Zoxk4M-5" target="yuGMsMESG8WVv5Zoxk4M-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGMsMESG8WVv5Zoxk4M-5" value="Structure from motion with COLMAP" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="55" y="220" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGMsMESG8WVv5Zoxk4M-8" value="Video in mp4" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="90" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGMsMESG8WVv5Zoxk4M-9" value="Frames" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yuGMsMESG8WVv5Zoxk4M-10" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
