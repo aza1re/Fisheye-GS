@@ -36,57 +36,23 @@ ECCV 2024 Workshop NFBCC
 ## Setup
 ```shell
 .\install_miniconda.ps1
-conda env remove -n fisheye_gs
 ```
 ## Prepare Training Data on Scannet++ Dataset
 Undistort the distortions excluding the radial distortion from $k_1$
 ```shell
-python prepare_scannetpp.py \
-    --path <path to your dataset> \
-    --src images \
-    --dst image_undistorted_fisheye 
-```
-Or simply use:
-```shell
-sh scripts/prepare.sh
+.\prepare.ps1
 ```
 ## Training on Scannet++ Dataset
 ```shell
-python train.py \
-    -s <path to your dataset> \
-    -m <path to model to be trained> \
-    --bs 3 \
-    --ds 1 \
-    --camera_model <FISHEYE/PINHOLE> \
-    --train_random_background 
-```
-Or simply use:
-```shell
-sh scripts/train.sh
+.\train.ps1
 ```
 ## Rendering on Scannet++ Dataset
 ```shell
-python render.py \
-    -s <path to your dataset> \
-    -m <path to model to be trained> \
-    --colmaps <relative path to colmap file if using dataset> \
-    --skip_train \
-    --camera_model <FISHEYE/PINHOLE> \
-    --ds 1 \
-    -r 1 
-```
-Or simply use
-```shell
-sh scripts/render.sh
+.\render.ps1
 ```
 ## Evaluating
 ```shell
-python metrics.py \
-    -m <path to model to be trained>
-```
-Or simply use
-```shell
-sh scripts/eval.sh
+.\eval.ps1
 ```
 
 ## License
