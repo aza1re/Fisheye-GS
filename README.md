@@ -35,8 +35,8 @@ ECCV 2024 Workshop NFBCC
 
 ## Setup
 ```shell
-conda env create --file environment.yml
-conda activate fisheye_gs
+.\install_miniconda.ps1
+conda env remove -n fisheye_gs
 ```
 ## Prepare Training Data on Scannet++ Dataset
 Undistort the distortions excluding the radial distortion from $k_1$
