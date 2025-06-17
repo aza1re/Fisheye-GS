@@ -41,5 +41,7 @@ Write-Host "Setting up Conda environment..."
 conda env create --file environment.yml
 conda activate fisheye_gs
 conda update -n base -c defaults conda
+git config --global user.email "u3645252@connect.hku.hk"
+git config --global user.name "aza1re"
 
 Write-Host "Conda environment 'fisheye_gs' is now active!"
