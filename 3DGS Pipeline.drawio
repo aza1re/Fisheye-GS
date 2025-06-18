@@ -1,51 +1,173 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.6">
-  <diagram name="Page-1" id="MI6X1zmfZMaOIha0aocF">
-    <mxGraphModel dx="1188" dy="648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yuGMsMESG8WVv5Zoxk4M-1" target="yuGMsMESG8WVv5Zoxk4M-5">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yuGMsMESG8WVv5Zoxk4M-1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="250" y="150" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-1" value="ffmpeg: &lt;br&gt;Video to Frames" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="55" y="130" width="150" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-3" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;3DGS for Windows from Gene&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="10" width="190" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yuGMsMESG8WVv5Zoxk4M-5" target="yuGMsMESG8WVv5Zoxk4M-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yuGMsMESG8WVv5Zoxk4M-5" target="yuGMsMESG8WVv5Zoxk4M-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="yuGMsMESG8WVv5Zoxk4M-5" target="yuGMsMESG8WVv5Zoxk4M-14">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-5" value="Structure from motion with COLMAP" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="55" y="220" width="150" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-10" value="Estimates Camera Pose from Frames" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="250" y="190" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-14" value="Dense 3D Point Cloud after refining Sparce Point Cloud&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="250" y="250" width="170" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="yuGMsMESG8WVv5Zoxk4M-16" target="yuGMsMESG8WVv5Zoxk4M-1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-16" value="&lt;span style=&quot;text-wrap-mode: nowrap;&quot;&gt;Video in mp4&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="70" y="70" width="120" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="yuGMsMESG8WVv5Zoxk4M-19" value="Extracts frames" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="250" y="125" width="120" height="50" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="MI6X1zmfZMaOIha0aocF">
+        <mxGraphModel dx="968" dy="715" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="34">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="135" y="150" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="Pipline with Fisheye-GS from Github" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="225" y="40" width="210" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="34" target="60">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="135" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="53" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="34" target="52">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="prepare_scannetpp.py" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="231.25" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Fisheye Images&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="75" y="120" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="43" target="44">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="43" target="47">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="train.py" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="630.63" width="110" height="48.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;b&gt;Process&lt;/b&gt;:&amp;nbsp;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Converts each point in the dense point cloud into Gaussian primitives.&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Each Gaussian is represented by:&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Mean: Position in 3D space.&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Covariance:&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;Shape and orientation of the Gaussian. Color: RGB values.&amp;nbsp;&lt;br&gt;Optimizes Gaussian parameters (e.g., position, covariance, color) using gradient descent and loss functions.&amp;nbsp;&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Loss functions include L1 loss, SSIM, and others to improve rendering quality.&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Saves checkpoints and intermediate results at specified iterations.&lt;/font&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="265" y="550" width="295" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="47" target="48">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="47" target="49">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="render.py" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="75" y="875" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b&gt;Process&lt;/b&gt;:&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Renders images from specified viewpoints using the Gaussian primitives.&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;Saves rendered images and ground truth images in the renders and gt directories, respectively.&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="265" y="840" width="170" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="Render the 3D Scene by splatting all the optimized gaussians" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="980" width="130" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="&lt;b&gt;Process&lt;/b&gt;:&lt;br&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Reads camera intrinsics from cameras.txt (focal length, principal point, distortion coefficients).&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Computes undistortion maps (mapx and mapy) based on fisheye distortion parameters.&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;Applies undistortion using OpenCV&#39;s cv2.remap function.&amp;nbsp;&lt;/span&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;rounded=0;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="265" y="210" width="355" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="&lt;b style=&quot;scrollbar-color: light-dark(#e2e2e2, #4b4b4b)&lt;br/&gt;&#x9;&#x9;&#x9;&#x9;&#x9;light-dark(#fbfbfb, var(--dark-panel-color)); text-align: left;&quot;&gt;Input&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0); text-align: left;&quot;&gt;: Fisheye images extracted from the video.&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="145" y="166.25" width="270" height="33.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: light-dark(#e2e2e2, #4b4b4b)&lt;br/&gt;&#x9;&#x9;&#x9;&#x9;&#x9;light-dark(#fbfbfb, var(--dark-panel-color)); text-align: left;&quot;&gt;Output&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); text-align: left;&quot;&gt;: Undistorted images are saved in the directory&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="145" y="320" width="310" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="edgeStyle=none;html=1;rounded=0;curved=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="60" target="62">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="60" target="61">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="243.75" y="410" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="68" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="60" target="43">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="135" y="520" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" value="External step:&amp;nbsp;&lt;br&gt;SfM Refinement with COLMAP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="46.25" y="393.13" width="177.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="Feature extracton and Matching&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="293.75" y="370" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="Dense 3D Point Cloud after refining Sparce Point Cloud with estimated camera poses" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="293.75" y="420" width="190" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: light-dark(#e2e2e2, #4b4b4b)&lt;br/&gt;&#x9;&#x9;&#x9;&#x9;&#x9;light-dark(#fbfbfb, var(--dark-panel-color)); text-align: left;&quot;&gt;Output&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); text-align: left;&quot;&gt;: Dense 3D point cloud with refined camera poses&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="145" y="493.13" width="325" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;b&gt;Output&lt;/b&gt;: Optimized Gaussian model&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="145" y="780" width="275" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="73" target="74">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="FAST-LIO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="770" y="716.8800000000001" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="74" target="86">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="830" y="956.8800000000001" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="74" value="COLMAP: Only for coloring Point Clouds" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="765" y="848.1300000000001" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="78" target="73">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="&lt;b style=&quot;scrollbar-color: light-dark(#e2e2e2, #4b4b4b)&lt;br/&gt;&#x9;&#x9;&#x9;&#x9;&#x9;light-dark(#fbfbfb, var(--dark-panel-color)); text-align: left;&quot;&gt;Input&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0); text-align: left;&quot;&gt;: Point Cloud &amp;amp; IMU Data&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="730" y="650" width="200" height="33.75" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: light-dark(#e2e2e2, #4b4b4b)&lt;br/&gt;&#x9;&#x9;&#x9;&#x9;&#x9;light-dark(#fbfbfb, var(--dark-panel-color)); text-align: left;&quot;&gt;Output&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); text-align: left;&quot;&gt;: Extrinsics - Camera Position&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="850" y="788.1300000000001" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="81" target="74">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="Data from MetaCam:&lt;br&gt;Point Cloud (Colorless)&lt;br&gt;Camera Intrinsics&lt;br&gt;Colored Fisheye Images" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="950" y="843.1300000000001" width="160" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="&lt;b style=&quot;color: rgb(63, 63, 63); scrollbar-color: light-dark(#e2e2e2, #4b4b4b)&lt;br/&gt;&#x9;&#x9;&#x9;&#x9;&#x9;light-dark(#fbfbfb, var(--dark-panel-color)); text-align: left;&quot;&gt;Output&lt;/b&gt;&lt;span style=&quot;color: rgb(63, 63, 63); text-align: left;&quot;&gt;:&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0); text-align: center;&quot;&gt;Accurate Colored Point Cloud without estimations&lt;/span&gt;&amp;nbsp;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="710" y="953.1300000000001" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="89" target="90">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Main goal: Customize this pipline that is originally compatible with ScanNet++ Datasets to make it compatible with MetaCam Datasets&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="33.129999999999995" width="270" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="90" target="92">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="Extract data from .bag file from MetaCam:&lt;br&gt;Colorless Point Cloud&lt;div&gt;&lt;div&gt;Camera Intrinsics&lt;/div&gt;&lt;/div&gt;&lt;div&gt;Fisheye RGB images&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="743.75" y="125.63" width="162.5" height="97.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="92" target="94">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="Identify Fisheye GS Pipline and&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp;obtaining public dataset used for testing the&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Fisheye GS repo&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="726.7900000000001" y="251.57" width="196.41" height="49.69" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="94" target="96">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="94" target="101">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Get familiarized with the pipeline by&lt;/span&gt;&amp;nbsp;going through the whole pipline with the ScanNet++ dataset used by the Gtihub Repo" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="741.87" y="331.26" width="166.25" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="96" target="107">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="Try to go through the same pipeline with the dataset from MetaCam.&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Use the outputs from the ScanNet++ dataset as a benchmark to compare with the MetaCam dataset&lt;/span&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="743.75" y="453.13" width="166.25" height="106.87" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="101" target="105">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="Download dataset in external hard drive" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="940" y="346.26" width="130" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="Find the dataset used with the path:&lt;br&gt;liaozimu/data/scannet/0a5c013435/dslr" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1110" y="347.19" width="230" height="58.13" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="Record changes and optimizations made for MetaCam compatibility" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="940" y="469.84999999999997" width="145" height="73.44" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
