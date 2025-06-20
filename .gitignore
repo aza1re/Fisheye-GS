@@ -18,6 +18,7 @@ tensorboard_3d
 core.*
 *.log
 codegen
+Miniconda3-latest-Linux-x86_64.sh
 
 ./submodules/fisheye_gs_rasterizer_old/
 ./submodules/panorama_gs_rasterizer
