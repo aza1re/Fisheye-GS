@@ -1,7 +1,9 @@
 *.pyc
 .vscode
+*.png
+data/ScanNet++/
+*.run
 **/venv/
-output
 output/
 SIBR_viewers
 SIBR_viewers/
