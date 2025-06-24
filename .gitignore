@@ -5,8 +5,6 @@ data/ScanNet++/
 *.run
 **/venv/
 output/
-SIBR_viewers
-SIBR_viewers/
 logs
 logs/
 build

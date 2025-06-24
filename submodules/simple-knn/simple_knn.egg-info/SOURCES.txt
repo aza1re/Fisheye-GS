@@ -1,4 +1,5 @@
 ext.cpp
+pyproject.toml
 setup.py
 simple_knn.cu
 spatial.cu

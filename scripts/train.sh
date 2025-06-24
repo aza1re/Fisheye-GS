@@ -1,12 +1,14 @@
 #!/bin/bash
+export LD_LIBRARY_PATH="$CONDA_PREFIX/lib/python3.10/site-packages/torch/lib:$LD_LIBRARY_PATH"
+
 python train.py \
-    -m output/0b031f3119 \
+    -m output/0a5c013435 \
     -s /home/user/Fisheye-GS/data/ScanNet++/data/0b031f3119/dslr \
-    --iterations 30000 \
-    --save_iterations 10000 20000 30000 \
-    --test_iterations 10000 20000 30000 \
-    --bs 3 \
+    --iterations 15000 \
+    --save_iterations 10000 \
+    --test_iterations 10000 \
+    --bs 6 \
     -r 1 \
     --sh_degree 3 \
     --camera_model FISHEYE \
-    --train_random_background
+    --train_random_background 
