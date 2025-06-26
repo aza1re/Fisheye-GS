@@ -1,1 +1,1 @@
-SIBR_gaussianViewer_app -m /home/user/Fisheye-GS/output/0a5c013435
+SIBR_gaussianViewer_app -m output/4ba22fa7e4 

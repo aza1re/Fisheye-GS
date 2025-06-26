@@ -84,3 +84,5 @@ if __name__ == "__main__":
     parser.add_argument('--dst', type=str, default="image_undistorted_fisheye")
     args = parser.parse_args()
     colmap_main(args)
+
+
