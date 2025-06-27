@@ -2,6 +2,7 @@
 .vscode
 *.png
 data/ScanNet++/
+data/fgsdata/
 *.run
 **/venv/
 output/

@@ -110,8 +110,15 @@ def training(args, dataset, opt, pipe, testing_iterations, saving_iterations, ch
 
             # Loss
             gt_image = viewpoint_cam.original_image.cuda()
-            Ll1 += l1_loss(image, gt_image)
-            Lssim += 1.0 - ssim(image, gt_image)
+            if args.ignore_black_border:
+                # Create a mask for non-black pixels (any channel > 0)
+                mask = (gt_image > 0).any(dim=0, keepdim=True).float()
+                # Only compute loss where mask is 1
+                Ll1 += l1_loss(image * mask, gt_image * mask) / (mask.sum() / mask.numel() + 1e-8)
+                Lssim += 1.0 - ssim(image * mask, gt_image * mask)
+            else:
+                Ll1 += l1_loss(image, gt_image)
+                Lssim += 1.0 - ssim(image, gt_image)
 
         # loss = (1.0 - opt.lambda_dssim) * Ll1 + opt.lambda_dssim * (1.0 - ssim(image, gt_image))
         loss = (1.0 - opt.lambda_dssim) * Ll1 + opt.lambda_dssim * Lssim
@@ -243,6 +250,8 @@ if __name__ == "__main__":
     parser.add_argument("--checkpoint_iterations", nargs="+", type=int, default=[])
     parser.add_argument("--start_checkpoint", type=str, default = None)
     parser.add_argument("--train_random_background", action="store_true", default=False)
+    parser.add_argument('--ignore_black_border', action='store_true', default=False,
+                    help="Ignore black (0,0,0) pixels in the loss calculation.")
     args = parser.parse_args(sys.argv[1:])
     args.save_iterations.append(args.iterations)
     
