@@ -7,7 +7,7 @@ import open3d as o3d
 import csv
 from tqdm import tqdm
 import traceback
-from scene.cameratxt import CameraTxtWriter
+from scene.undistort import Undistorter
 from scene.mask import BorderMasker
 
 o3d.utility.set_verbosity_level(o3d.utility.VerbosityLevel.Error)
@@ -78,7 +78,5 @@ print("Extraction and reformatting complete.")
 
 calib_path = "/home/user/Fisheye-GS/data/fgsdata/2025-06-18_16-57-10/info/calibration.json"
 out_path = "/home/user/Fisheye-GS/data/fgsdata/2025-06-18_16-57-10/colmap/cameras.txt"
-writer = CameraTxtWriter(calib_path, out_path, scale=0.25)  # Divide intrinsics by 4
-writer.write_cameras_txt()
 masker = BorderMasker(mask_ratio=0.97)
 masker.process_folder("images/left", "masked/left")
