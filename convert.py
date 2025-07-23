@@ -78,5 +78,13 @@ print("Extraction and reformatting complete.")
 
 calib_path = "/home/user/Fisheye-GS/data/fgsdata/2025-06-18_16-57-10/info/calibration.json"
 out_path = "/home/user/Fisheye-GS/data/fgsdata/2025-06-18_16-57-10/colmap/cameras.txt"
+
+# Undistort images
+undistorter = Undistorter(out_path)
+undistorter.undistort_images(1, "images/left", "undistorted/left")
+undistorter.undistort_images(2, "images/right", "undistorted/right")
+
+# Mask undistorted images
 masker = BorderMasker(mask_ratio=0.97)
-masker.process_folder("images/left", "masked/left")
+masker.process_folder("undistorted/left", "masked/left")
+masker.process_folder("undistorted/right", "masked/right")
