@@ -79,22 +79,10 @@ def getNerfppNorm(cam_info):
     return {"translate": translate, "radius": radius}
 
 def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder, override_intr=None):
-    import glob
     cam_infos = []
-
-    # Gather all image paths from left and right if they exist, else just use main folder
-    left_folder = os.path.join(images_folder, "left")
-    right_folder = os.path.join(images_folder, "right")
-    image_paths = []
-    if os.path.isdir(left_folder) and os.path.isdir(right_folder):
-        image_paths += glob.glob(os.path.join(left_folder, "*"))
-        image_paths += glob.glob(os.path.join(right_folder, "*"))
-    else:
-        image_paths += glob.glob(os.path.join(images_folder, "*"))
-    image_paths_dict = {os.path.basename(p): p for p in image_paths}
-
     for idx, key in enumerate(cam_extrinsics):
         sys.stdout.write('\r')
+        # the exact output you're looking for:
         sys.stdout.write("Reading camera {}/{}".format(idx+1, len(cam_extrinsics)))
         sys.stdout.flush()
 
@@ -103,7 +91,7 @@ def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder, override_in
         height = intr.height
         width = intr.width
 
-        if override_intr is not None:
+        if override_intr is not None: #SCANNET++
             intr.params[0] = override_intr[0]
             intr.params[1] = override_intr[1]
 
@@ -120,24 +108,18 @@ def readColmapCameras(cam_extrinsics, cam_intrinsics, images_folder, override_in
             focal_length_y = intr.params[1]
             FovY = focal2fov(focal_length_y, height)
             FovX = focal2fov(focal_length_x, width)
-        elif intr.model=="OPENCV_FISHEYE":
+        elif intr.model=="OPENCV_FISHEYE": #SCANNET++
             focal_length_x = intr.params[0]
             focal_length_y = intr.params[1]
             FovY = focal2fov(focal_length_y, height)
             FovX = focal2fov(focal_length_x, width)
         else:
-            assert False, "Colmap camera model not handled!"
+            assert False, "Colmap camera model not handled: only undistorted datasets (PINHOLE, SIMPLE_PINHOLE, OPENCV_FISHEYE cameras) supported!"
 
-        # Use the basename to find the correct image in left/right/main
-        image_basename = os.path.basename(extr.name)
-        image_path = image_paths_dict.get(image_basename)
-        if image_path is None:
-            # Try to fix extension case
-            image_path = image_paths_dict.get(image_basename.replace(".png", ".jpg"))
-        if image_path is None:
-            print(f"\nWarning: Could not find image for {image_basename}")
-            continue
-        image_name = os.path.splitext(image_basename)[0]
+        image_path = os.path.join(images_folder, os.path.basename(extr.name))
+        image_name = os.path.basename(image_path).split(".")[0]
+        if not os.path.exists(image_path):
+            image_path = image_path.replace(".png", ".JPG") # fix for loading zhita_5k dataset
         image = Image.open(image_path)
         cam_info = CameraInfo(uid=uid, R=R, T=T, FovY=FovY, FovX=FovX, image=image,
                               image_path=image_path, image_name=image_name, width=width, height=height)

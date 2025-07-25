@@ -2,10 +2,11 @@ import json
 from pathlib import Path
 
 class CameraTxtWriter:
-    def __init__(self, calib_path, out_path):
+    def __init__(self, calib_path, out_path, downscale=1):
         self.calib_path = Path(calib_path)
         self.out_path = Path(out_path)
         self.calib = None
+        self.downscale = downscale
 
     def load_calibration(self):
         with open(self.calib_path) as f:
@@ -21,12 +22,12 @@ class CameraTxtWriter:
         ]
         for idx, cam in enumerate(self.calib["cameras"], 1):
             model = cam["distortion"]["camera_model"]
-            width = cam["width"]
-            height = cam["height"]
-            fx = cam["intrinsic"]["fl_x"]
-            fy = cam["intrinsic"]["fl_y"]
-            cx = cam["intrinsic"]["cx"]
-            cy = cam["intrinsic"]["cy"]
+            width = int(cam["width"] // self.downscale)
+            height = int(cam["height"] // self.downscale)
+            fx = cam["intrinsic"]["fl_x"] / self.downscale
+            fy = cam["intrinsic"]["fl_y"] / self.downscale
+            cx = cam["intrinsic"]["cx"] / self.downscale
+            cy = cam["intrinsic"]["cy"] / self.downscale
             k1 = cam["distortion"]["params"]["k1"]
             k2 = cam["distortion"]["params"]["k2"]
             k3 = cam["distortion"]["params"]["k3"]

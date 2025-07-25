@@ -3,11 +3,12 @@ set -e
 
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib/python3.10/site-packages/torch/lib:$LD_LIBRARY_PATH"
 
-DATASET=/home/user/Fisheye-GS/data/ScanNet++/data/4ba22fa7e4/dslr
+DATASET=/home/user/Fisheye-GS/data/fgsdata/2025-06-18_16-57-10
 
 python train.py \
-    -m output/4ba22fa7e4 \
+    -m output/2025-06-18_16-57-10 \
     -s $DATASET \
+    --images masked/all \
     --iterations 30000 \
     --save_iterations 10000 20000 30000 \
     --test_iterations 10000 20000 30000 \

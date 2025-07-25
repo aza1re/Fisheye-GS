@@ -9,6 +9,8 @@ from tqdm import tqdm
 import traceback
 from scene.undistort import Undistorter
 from scene.mask import BorderMasker
+from scene.cameratxt import CameraTxtWriter
+from scene.crop import FisheyeRectCropper
 
 o3d.utility.set_verbosity_level(o3d.utility.VerbosityLevel.Error)
 
@@ -22,6 +24,13 @@ left_dst.mkdir(parents=True, exist_ok=True)
 right_dst.mkdir(parents=True, exist_ok=True)
 imu_dst.mkdir(parents=True, exist_ok=True)
 lidar_dst.mkdir(parents=True, exist_ok=True)
+
+cropped_left_dst = dst_scene / "cropped" / "left"
+cropped_right_dst = dst_scene / "cropped" / "right"
+cropped_left_dst.mkdir(parents=True, exist_ok=True)
+cropped_right_dst.mkdir(parents=True, exist_ok=True)
+
+cropper = FisheyeRectCropper(output_size=(760, 760))  # <-- Add this line
 
 try:
     with MetaCamEduReader(src_root) as reader:
@@ -41,6 +50,9 @@ try:
                 if img is not None:
                     out_path = left_dst / f"left_{idx:06d}.jpg"
                     cv2.imwrite(str(out_path), img)  # Save original size
+                    cropped_img = cropper.crop_center_rect(img)
+                    cropped_out_path = cropped_left_dst / f"left_{idx:06d}.jpg"
+                    cv2.imwrite(str(cropped_out_path), cropped_img)
             # Right camera
             if synced.camera_right is not None:
                 img_bytes = synced.camera_right.data
@@ -49,6 +61,9 @@ try:
                 if img is not None:
                     out_path = right_dst / f"right_{idx:06d}.jpg"
                     cv2.imwrite(str(out_path), img)  # Save original size
+                    cropped_img = cropper.crop_center_rect(img)
+                    cropped_out_path = cropped_right_dst / f"right_{idx:06d}.jpg"
+                    cv2.imwrite(str(cropped_out_path), cropped_img)
             # IMU
             if hasattr(synced, "imu") and synced.imu is not None:
                 imu = synced.imu
@@ -79,12 +94,20 @@ print("Extraction and reformatting complete.")
 calib_path = "/home/user/Fisheye-GS/data/fgsdata/2025-06-18_16-57-10/info/calibration.json"
 out_path = "/home/user/Fisheye-GS/data/fgsdata/2025-06-18_16-57-10/colmap/cameras.txt"
 
+downscale = 4  # 3040/760 or 4032/1008
+
+cameratxtwriter = CameraTxtWriter(calib_path, out_path, downscale=downscale)
+cameratxtwriter.write_cameras_txt()
+
 # Undistort images
 undistorter = Undistorter(out_path)
-undistorter.undistort_images(1, "images/left", "undistorted/left")
-undistorter.undistort_images(2, "images/right", "undistorted/right")
-
-# Mask undistorted images
-masker = BorderMasker(mask_ratio=0.97)
-masker.process_folder("undistorted/left", "masked/left")
-masker.process_folder("undistorted/right", "masked/right")
+undistorter.undistort_images(
+    1,
+    src_root / "images" / "left",
+    src_root / "undistorted" / "left"
+)
+undistorter.undistort_images(
+    2,
+    src_root / "images" / "right",
+    src_root / "undistorted" / "right"
+)
